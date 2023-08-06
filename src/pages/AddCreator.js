@@ -22,41 +22,41 @@ const AddCreator = ({ onAdd }) => {
   };
 
   return (
-    <div className="add-creator-container">
-      <h1 className="add-creator-title">Add Content Creator</h1>
-      <form className="add-creator-form" onSubmit={handleSubmit}>
-        <label className="add-creator-label">Name</label>
+    <div >
+      <h1> Add a Content Creator</h1>
+      <form onSubmit={handleSubmit}>
+        <label >Name</label>
         <input
-          className="add-creator-input"
+         
           placeholder= "Enter the creator's name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label className="add-creator-label">Social Media URL</label>
+        <label>Social Media URL</label>
         <input
-          className="add-creator-input"
+        
           type="text"
           value={url}
           placeholder='Enter url of any social media'
           onChange={(e) => setUrl(e.target.value)}
         />
-        <label className="add-creator-label">Description</label>
+        <label >Description</label>
         <textarea
-          className="add-creator-textarea"
+          
           value={description}
           placeholder='Describe about the creator'
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label className="add-creator-label">Image URL</label>
+        <label >Image URL</label>
         <input
-          className="add-creator-input"
+        
           type="text"
           value={imageURL}
           placeholder='Add a image address of a picture'
           onChange={(e) => setImageURL(e.target.value)}
         />
-        <button className="add-creator-button" type="submit">
+        <button type="submit">
           Add
         </button>
       </form>
