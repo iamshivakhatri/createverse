@@ -29,14 +29,14 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [✅] List anything else that you added to improve the site's functionality!
-I hava made it responsive too. This looks even better on mobile phone.
+* [✅] I hava made it responsive too. 
+  [✅] This looks even better on mobile phone.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://imgur.com/a/9P2R1cr' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<img src='./src/pages/screen.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 Kap
@@ -46,8 +46,6 @@ GIF created with ...  👉🏿 Kap
 [peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
-
-Describe any challenges encountered while building the app or any additional context you'd like to add.
 
 I hadn't activated any RLS policies for the table and it made me suffer quite a time. 
 
