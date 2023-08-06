@@ -59,12 +59,14 @@ article {
   /* Responsive design */
   @media screen and (max-width: 768px) {
     article {
-      width:90%;
+      width:300px;
       max-height: none;
       margin-bottom: 20px;
     }
     
     article img {
-      max-height: 50%; /* Adjust the image height for smaller screens */
-    }
+      max-height: 50%;
+      max-width: 400px;
   }
+
+}
