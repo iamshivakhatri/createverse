@@ -1,0 +1,44 @@
+/* ViewCreator.css */
+.view-creator {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .view-creator h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .view-creator img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .view-creator p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .view-creator a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-creator a:hover {
+    background-color: #0056b3;
+  }
+  
+  .view-creator .not-found {
+    color: red;
+    font-weight: bold;
+  }
+  
