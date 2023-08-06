@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './AddCreator.css'; // Import the Pico CSS file
+import { useNavigate } from 'react-router-dom';
+
 
 const AddCreator = ({ onAdd }) => {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [description, setDescription] = useState('');
@@ -15,6 +17,7 @@ const AddCreator = ({ onAdd }) => {
     setUrl('');
     setDescription('');
     setImageURL('');
+    navigate("/");
 
   };
 
@@ -22,31 +25,35 @@ const AddCreator = ({ onAdd }) => {
     <div className="add-creator-container">
       <h1 className="add-creator-title">Add Content Creator</h1>
       <form className="add-creator-form" onSubmit={handleSubmit}>
-        <label className="add-creator-label">Name:</label>
+        <label className="add-creator-label">Name</label>
         <input
           className="add-creator-input"
+          placeholder= "Enter the creator's name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label className="add-creator-label">URL:</label>
+        <label className="add-creator-label">Social Media URL</label>
         <input
           className="add-creator-input"
           type="text"
           value={url}
+          placeholder='Enter url of any social media'
           onChange={(e) => setUrl(e.target.value)}
         />
-        <label className="add-creator-label">Description:</label>
+        <label className="add-creator-label">Description</label>
         <textarea
           className="add-creator-textarea"
           value={description}
+          placeholder='Describe about the creator'
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label className="add-creator-label">Image URL:</label>
+        <label className="add-creator-label">Image URL</label>
         <input
           className="add-creator-input"
           type="text"
           value={imageURL}
+          placeholder='Add a image address of a picture'
           onChange={(e) => setImageURL(e.target.value)}
         />
         <button className="add-creator-button" type="submit">

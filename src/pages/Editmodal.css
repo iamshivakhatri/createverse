@@ -37,6 +37,7 @@
   font-size: 24px;
   font-weight: bold;
   color: #333;
+  margin:0%;
 }
 
 .close-button {
@@ -46,14 +47,15 @@
   color: #777;
   cursor: pointer;
   transition: color 0.3s ease;
+  width: 20px;
 }
 
-.close-button:hover {
-  color: #333;
-}
+
 
 /* Form Styles */
 .input-label {
+  text-align: left;
+  display: block;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -62,12 +64,13 @@
 
 .input-field,
 .textarea-field {
-  width: 100%;
+  width: 96%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 15px;
   font-size: 16px;
+  margin-right: 10px;
 }
 
 .textarea-field {
@@ -82,15 +85,13 @@
 
 .button {
   padding: 8px 20px;
-  background-color: #007bff;
+  
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-right:10px;
 }
 
-.button:hover {
-  background-color: #0056b3;
-}

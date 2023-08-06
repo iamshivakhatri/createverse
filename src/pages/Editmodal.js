@@ -21,32 +21,9 @@ const EditModal = ({ creator, onSave, onClose }) => {
   };
 
   return (
-    /*** 
-    <div className="modal">
-      <div className="modal-content">
-        <h2>Edit Creator</h2>
-        <label>Name:</label>
-        <input type="text" value={editedName} onChange={(e) => setEditedName(e.target.value)} />
-        <label>URL:</label>
-        <input type="text" value={editedUrl} onChange={(e) => setEditedUrl(e.target.value)} />
-        <label>Description:</label>
-        <textarea
-          value={editedDescription}
-          onChange={(e) => setEditedDescription(e.target.value)}
-        />
-        <label>Image URL:</label>
-        <input
-          type="text"
-          value={editedImageURL}
-          onChange={(e) => setEditedImageURL(e.target.value)}
-        />
-        <button onClick={handleSave}>Save</button>
-        <button onClick={onClose}>Cancel</button>
-      </div>
-    </div>
-
-  **/
+ 
   <div className="modal">
+
   <div className="modal-content">
     <div className="modal-header">
       <h2 className="modal-title">Edit Creator</h2>

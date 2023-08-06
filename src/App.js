@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ShowCreators from './pages/ShowCreators';
 import ViewCreator from './pages/ViewCreator';
-import EditCreator from './pages/EditCreator';
 import AddCreator from './pages/AddCreator';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -11,25 +10,28 @@ import supabase from './client'
 
 
 function App() {
-  console.log(supabase);
+
   const [fetchError, setFetchError] = useState(null);
+  if(fetchError !== null){
+    console.log("There is error.")
+  }
   const [creators, setCreators] = useState([]);
 
 
 
   useEffect(()=>{
     const fetchSmoothies = async() =>{
-      {/** Specifying the table name */}
+    
       const {data, error} = await supabase
       .from('creators')    
       .select()
       if (error){
         setFetchError("Couldn't Fetch the data from the server.")
         setCreators(null)
-        console.log(error)
+        
       }
       if (data){
-        console.log("I am running.", data)
+      
         setCreators(data);
         setFetchError(null);
       }
@@ -61,9 +63,17 @@ function App() {
   ])
   .select()
 
+  if(!data){
+    console.log("There is no data when adding")
+  }
 
-    console.log("value of id", id);
-    console.log("add.id", data.id);
+
+    if (error){
+      setFetchError("Couldn't Fetch the data from the server.")
+      setCreators(null)
+      
+    }
+
     const passedCreators = {
       id: id,
       name: add.name,
@@ -79,14 +89,6 @@ function App() {
   }
 
 
-  {/**
-  if(element.id === passedCreator.id){
-        element.name = passedCreator.name,
-        element.url = passedCreator.url,
-        element.description = passedCreator.description,
-        element.imageURL = passedCreator.imageURL
-        break;
-      } */}
 
   const onEdit = async (passedCreator)=>{
 
@@ -100,7 +102,7 @@ function App() {
     let newCreators = JSON.parse(JSON.stringify(creators)); //Creating a deep copy
     for(let i = 0; i < newCreators.length; i++){
       let element  = newCreators[i];
-      if(element.id == passedCreator.id){
+      if(element.id === passedCreator.id){
         element.name = passedCreator.name;
         element.url = passedCreator.url;
         element.description = passedCreator.description;
@@ -110,7 +112,7 @@ function App() {
       }
     }
     setCreators(newCreators);
-    console.log("passedCreator id is ", passedCreator.id)
+
 
 
     // Update the database
@@ -122,6 +124,9 @@ function App() {
       if (error) {
         console.error('Error updating database:', error);
       }
+      if(!data){
+        console.log('Data is not coming while updating');
+      }
 
   }
   
@@ -132,13 +137,13 @@ function App() {
     //Delete the record from the state
     setCreators(
     creators.filter((creator)=>{
-      return creator != passedCreator;
+      return creator !== passedCreator;
 
     }));
 
       // Delete the record from the database
       const { error } = await supabase
-      .from('creators') // Replace with your actual table name
+      .from('creators') 
       .delete()
       .eq('id', passedCreator.id); // Assuming 'id' is the primary key of your table
 
@@ -153,10 +158,17 @@ function App() {
   
 
    <Router>
-   <div className="App">
+   <div className="App" data-theme = "light">
      <div className="top-section">
+        <div className="contents">  
+        <div className="title"> 
+        <p> CREATORVERSE </p>
+        </div>
+        <div className="buttons-section">  
        <Link className="link-button" to="/">ShowCreator</Link>
        <Link className="link-button" to="/add">AddCreator</Link>
+       </div>
+       </div>
      </div>
      <div className="bottom-section">
        

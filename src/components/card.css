@@ -1,20 +1,31 @@
 /* Card.css */
+h2{
+  color: #fff;
+}
 
-.card {
+
+/* AddCreatorStyles.css */
+.description-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  color: white;
+}
+
+
+
+article {
     width: 300px;
-    min-height: 300px; /* Half of the viewport height */
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Half of the viewport height */
     overflow: hidden;
-    display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    
+    background-color: #000102 ;  
 
   }
   
-  .card img {
+  article img {
     width: 100%;
     max-height: 60%; /* Adjust the image height as needed */
     object-fit: cover;
@@ -22,31 +33,7 @@
     border-top-right-radius: 10px;
   }
   
-  .card h2 {
-    padding: 10px;
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
-  }
   
-  .card p {
-    padding: 0 10px;
-    font-size: 1rem;
-    color: #666;
-    text-align: center;
-  }
-  
-  .card a {
-    padding: 10px;
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .card a:hover {
-    text-decoration: underline;
-  }
-  /* card.css */
 
 
 .card-buttons {
@@ -59,7 +46,7 @@
 .card-buttons button {
   padding: 5px 10px;
   border: none;
-  background-color: #007bff;
+
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -67,17 +54,17 @@
   margin-right:10px;
 }
 
-.card-buttons button:hover {
-  background-color: #0056b3;
-}
 
   
   /* Responsive design */
   @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
-      height: auto;
+    article {
+      width:90%;
+      max-height: none;
       margin-bottom: 20px;
     }
+    
+    article img {
+      max-height: 50%; /* Adjust the image height for smaller screens */
+    }
   }
-  
