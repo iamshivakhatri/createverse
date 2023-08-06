@@ -28,7 +28,7 @@ The following **optional** features are implemented:
 - [✅] An image of each content creator is shown on their content creator card
 
 The following **additional** features are implemented:
-
+gi
 * [✅] I hava made it responsive too. 
   [✅] This looks even better on mobile phone.
 
@@ -39,7 +39,7 @@ Here's a walkthrough of implemented required features:
 👉🏿<img src='./src/pages/screen.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 Kap
+GIF created with ...  👉🏿  LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
