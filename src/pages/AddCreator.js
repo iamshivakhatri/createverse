@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './AddCreator.css';
 
 const AddCreator = ({ onAdd }) => {
   const navigate = useNavigate();
@@ -17,46 +17,45 @@ const AddCreator = ({ onAdd }) => {
     setUrl('');
     setDescription('');
     setImageURL('');
-    navigate("/");
-
+    navigate('/');
   };
 
   return (
-    <div >
-      <h1> Add a Content Creator</h1>
-      <form onSubmit={handleSubmit}>
-        <label >Name</label>
+    <div className="add-creator-container">
+      <h1 className="add-creator-title">Add a Content Creator</h1>
+      <form className="add-creator-form" onSubmit={handleSubmit}>
+        <label className="add-creator-label">Name</label>
         <input
-         
-          placeholder= "Enter the creator's name"
+          className="add-creator-input"
           type="text"
+          placeholder="Enter the creator's name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label>Social Media URL</label>
+        <label className="add-creator-label">Social Media URL</label>
         <input
-        
+          className="add-creator-input"
           type="text"
+          placeholder="Enter url of any social media"
           value={url}
-          placeholder='Enter url of any social media'
           onChange={(e) => setUrl(e.target.value)}
         />
-        <label >Description</label>
+        <label className="add-creator-label">Description</label>
         <textarea
-          
+          className="add-creator-textarea"
           value={description}
-          placeholder='Describe about the creator'
+          placeholder="Describe about the creator"
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label >Image URL</label>
+        <label className="add-creator-label">Image URL</label>
         <input
-        
+          className="add-creator-input"
           type="text"
+          placeholder="Add an image address of a picture"
           value={imageURL}
-          placeholder='Add a image address of a picture'
           onChange={(e) => setImageURL(e.target.value)}
         />
-        <button type="submit">
+        <button className="add-creator-button" type="submit">
           Add
         </button>
       </form>
