@@ -1,10 +1,10 @@
-/* Card.css */
+
 h2{
   color: #fff;
 }
 
 
-/* AddCreatorStyles.css */
+
 .description-line {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -17,7 +17,7 @@ h2{
 
 article {
     width: 300px;
-    height: 400px; /* Half of the viewport height */
+    height: 400px; 
     overflow: hidden;
     flex-direction: column;
     
@@ -27,7 +27,7 @@ article {
   
   article img {
     width: 100%;
-    max-height: 60%; /* Adjust the image height as needed */
+    max-height: 60%; 
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -56,7 +56,7 @@ article {
 
 
   
-  /* Responsive design */
+ 
   @media screen and (max-width: 768px) {
     article {
       width:300px;

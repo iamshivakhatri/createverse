@@ -1,7 +1,10 @@
 // pages/EditCreator.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const EditCreator = ({ creator, onSave }) => {
+  //State variables to hold value and used for onChange of input.
+
+  //Here we are filling the value with old value.
   const [name, setName] = useState(creator.name);
   const [url, setUrl] = useState(creator.url);
   const [description, setDescription] = useState(creator.description);
@@ -16,15 +19,31 @@ const EditCreator = ({ creator, onSave }) => {
   return (
     <div>
       <h1>Edit Content Creator</h1>
+      {/**Simple form to take input for editing. */}
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
         <label>URL:</label>
-        <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} />
+        <input
+          type="text"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+        />
         <label>Description:</label>
-        <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
         <label>Image URL:</label>
-        <input type="text" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
+        <input
+          type="text"
+          value={imageURL}
+          onChange={(e) => setImageURL(e.target.value)}
+        />
         <button type="submit">Save</button>
       </form>
     </div>

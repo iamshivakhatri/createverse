@@ -13,14 +13,19 @@ const AddCreator = ({ onAdd }) => {
     e.preventDefault();
     const newCreator = { name, url, description, imageURL };
     onAdd(newCreator);
+
+    // Clear input fields after newCreator is passed.
     setName('');
     setUrl('');
     setDescription('');
     setImageURL('');
+
+    //Use the useNavigate hook to navigate to ShowCreator page after adding the creator
     navigate('/');
   };
 
   return (
+   
     <div className="add-creator-container">
       <h1 className="add-creator-title">Add a Content Creator</h1>
       <form className="add-creator-form" onSubmit={handleSubmit}>

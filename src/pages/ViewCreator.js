@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import EditModal from './Editmodal';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import './ViewCreator.css'; // You can create a CSS file for styling
+import './ViewCreator.css'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -27,7 +27,7 @@ const ViewCreator = ({ creators, onEdit, onDelete }) => {
     handleEditModalClose();
   };
 
-  // Find the creator with the matching ID
+  // Getting the creator based on the id, we could have got creator differently too.
   const creator = creators.find((c) => c.id === parseInt(id));
 
   if (!creator) {
